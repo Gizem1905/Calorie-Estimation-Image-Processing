@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalori Hesaplayıcı Projesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #video-container {
+            border: 5px solid #007bff;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        #video-feed {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍏 Web Tabanlı Kalori Hesaplayıcı Projesi 🍌</h1>
+    <div id="video-container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Kamera Akışı Yükleniyor...">
+    </div>
+    <div class="info">
+        <p>Meyveleri kameranın önüne tutun. Sistem önce Şablon (Fotoğraf) Tespiti, başarısız olursa Renk Tespiti ile çalışır.</p>
+        <p>Çıkmak için Terminal penceresine gelin ve Ctrl+C yapın.</p>
+    </div>
+</body>
+</html>
